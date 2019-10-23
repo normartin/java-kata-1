@@ -5,14 +5,16 @@ object MainApp {
     @JvmStatic
     fun main(args: Array<String>) {
 
-        // 1.
+        println()
+        println("2.")
         val authorLookUp = authorsLookup(importAuthors())
         val booksAndMagazines = BooksAndMagazines(
                 books = importBooks(authorLookUp),
                 magazines = importMagazine(authorLookUp)
         )
 
-        // 2.
+        println()
+        println("2.")
         // I am not sure what to expected output format should look like.
 
         // I guess that is not the expected way?

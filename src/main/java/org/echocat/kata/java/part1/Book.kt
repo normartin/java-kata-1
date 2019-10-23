@@ -2,9 +2,9 @@ package org.echocat.kata.java.part1
 
 data class Book(
         override val title: String,
-        val description: String,
         override val authors: Set<Author>,
-        override val isbn: String
+        override val isbn: String,
+        val description: String
 ) : PrintMedium
 
 fun importBooks(emailsToAuthor: (Collection<String>) -> Set<Author>): List<Book> = readCsv("books.csv")

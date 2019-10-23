@@ -9,9 +9,9 @@ private val germanFormatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDI
 
 data class Magazine(
         override val title: String,
-        val publishedAt: LocalDate,
         override val authors: Set<Author>,
-        override val isbn: String
+        override val isbn: String,
+        val publishedAt: LocalDate
 ) : PrintMedium
 
 fun importMagazine(authorLookup: (Collection<String>) -> Set<Author>): List<Magazine> = readCsv("magazines.csv")

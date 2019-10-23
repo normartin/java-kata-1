@@ -6,7 +6,7 @@ import org.junit.Test
 class BooksAndMagazinesTest {
 
     @Test
-    fun findPrintMediumbyIsbn() {
+    fun `can find print medium by isbn`() {
 
         val booksAndMagazines = BooksAndMagazines(
                 books = listOf(
@@ -26,7 +26,7 @@ class BooksAndMagazinesTest {
     }
 
     @Test
-    fun canFindPrintMediumByAuthorsEmails() {
+    fun `can find print medium by authors email`() {
 
         val author = anAuthor(email = "a@a.de")
 
@@ -45,7 +45,7 @@ class BooksAndMagazinesTest {
     }
 
     @Test
-    fun canReturnBooksAndMagazinesSorted() {
+    fun `can return books and magazines sorted`() {
         val booksAndMagazines = BooksAndMagazines(
                 books = listOf(
                         aBook(title = "zb"),
