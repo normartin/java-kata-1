@@ -1,14 +1,12 @@
-package org.echocat.kata.java.part1;
+package org.echocat.kata.java.part1
 
-@SuppressWarnings("UseOfSystemOutOrSystemErr")
-public class MainApp {
+object MainApp {
 
-    public static void main(String[] args) {
-        System.out.println(getHelloWorldText());
-    }
+    fun getHelloWorldText() = "Hello world!"
 
-    protected static String getHelloWorldText() {
-        return "Hello world!";
+    @JvmStatic
+    fun main(args: Array<String>) {
+        println(getHelloWorldText())
     }
 
 }

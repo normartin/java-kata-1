@@ -1,15 +1,14 @@
-package org.echocat.kata.java.part1;
+package org.echocat.kata.java.part1
 
-import org.junit.Test;
+import org.hamcrest.CoreMatchers.`is`
+import org.junit.Assert.assertThat
+import org.junit.Test
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
-public class MainAppUnitTest {
+class MainAppUnitTest {
 
     @Test
-    public void testGetHelloWorldText() throws Exception {
-        assertThat(MainApp.getHelloWorldText(), is("Hello world!"));
+    fun testGetHelloWorldText() {
+        assertThat(MainApp.getHelloWorldText(), `is`("Hello world!"))
     }
 
 }
